@@ -1,9 +1,11 @@
-#=
-Day1:
-- Julia version: 1.8.3
-- Author: Jens Voß
-- Date: 2022-12-01
-=#
+
+function part1(filename)
+    solve(filename, strategy1)
+end
+
+function part2(filename)
+    solve(filename, strategy2)
+end
 
 function solve(filename, strategy)
 
@@ -27,16 +29,6 @@ end
 function strategy2(line)
     o = codeunit(line, 1) - 64
     i = codeunit(line, 3) - 87
-    r = 1 + (o + i + 3) % 3
-#     println(line)
-#     println(r)
-    r
+    1 + (o + i + 3) % 3
 end
 
-function solve1(filename)
-    solve(filename, strategy1)
-end
-
-function solve2(filename)
-    solve(filename, strategy2)
-end

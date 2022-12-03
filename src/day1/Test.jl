@@ -1,13 +1,10 @@
-#=
-Test:
-- Julia version: 1.8.3
-- Author: Jens Voß
-- Date: 2022-12-01
-=#
 
-include("Day1.jl")
+using Test
+include("Today.jl")
 
-filename = "src\\day1\\test.txt"
+filename = string(@__DIR__, "/test.txt")
 
-println(solve1(filename))
-println(solve2(filename))
+@testset "Today" begin
+    @test part1(filename) == 24000
+    @test part2(filename) == 45000
+end

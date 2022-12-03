@@ -1,9 +1,13 @@
-#=
-Day1:
-- Julia version: 1.8.3
-- Author: Jens Voß
-- Date: 2022-12-01
-=#
+
+function part1(filename)
+    result = solve(filename)
+    result[3]
+end
+
+function part2(filename)
+    result = solve(filename)
+    sum(result)
+end
 
 function solve(filename)
 
@@ -31,12 +35,3 @@ function solve(filename)
 
 end
 
-function solve1(filename)
-    result = solve(filename)
-    result[3]
-end
-
-function solve2(filename)
-    result = solve(filename)
-    sum(result)
-end

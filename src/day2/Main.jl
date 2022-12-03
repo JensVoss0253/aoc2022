@@ -1,13 +1,7 @@
-#=
-Test:
-- Julia version: 1.8.3
-- Author: Jens Voß
-- Date: 2022-12-01
-=#
 
-include("Day2.jl")
+include("Today.jl")
 
-filename = "src\\day2\\main.txt"
+filename = string(@__DIR__, "/main.txt")
 
-println(solve1(filename))
-println(solve2(filename))
+println("Part1: ", part1(filename))
+println("Part2: ", part2(filename))
