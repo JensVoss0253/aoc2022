@@ -51,9 +51,11 @@ end
 
 function follow(head::Cell, tail::Cell)::Cell
     if abs(head.x - tail.x) == 2
-        Cell((head.x + tail.x) ÷ 2, head.y)
+        y = abs(head.y - tail.y) < 2 ? head.y : ((head.y + tail.y) ÷ 2)
+        Cell((head.x + tail.x) ÷ 2, y)
     elseif abs(head.y - tail.y) == 2
-        Cell(head.x, (head.y + tail.y) ÷ 2)
+        x = abs(head.x - tail.x) < 2 ? head.x : ((head.x + tail.x) ÷ 2)
+        Cell(x, (head.y + tail.y) ÷ 2)
     else
         tail
     end
